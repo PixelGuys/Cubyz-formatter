@@ -23,12 +23,12 @@ jobs:
       - run: zig build -Dtarget=x86_64-macos-none
       - run: zig build -Dtarget=x86_64-macos-none
       - run: |
-          if zig build -- *.zig src/*.zig src/*/*.zig src/*/*/*.zig src/*/*/*/*.zig src/*/*/*/*/*.zig src/*/*/*/*/*/*.zig src/*/*/*/*/*/*/*.zig src/*/*/*/*/*/*/*/*.zig src/*/*/*/*/*/*/*/*/*.zig src/*/*/*/*/*/*/*/*/*/*.zig | grep -q . ; then
+          if zig build run -- *.zig src/*.zig src/*/*.zig src/*/*/*.zig src/*/*/*/*.zig src/*/*/*/*/*.zig src/*/*/*/*/*/*.zig src/*/*/*/*/*/*/*.zig src/*/*/*/*/*/*/*/*.zig src/*/*/*/*/*/*/*/*/*.zig src/*/*/*/*/*/*/*/*/*/*.zig | grep -q . ; then
             git diff --color=always;
             exit 1;
           fi
       - run: |
-          if zig build fmt -- --zon build.zig.zon | grep -q . ; then
+          if zig build run -- --zon build.zig.zon | grep -q . ; then
             git diff --color=always;
             exit 1;
           fi
