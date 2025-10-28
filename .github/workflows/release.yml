@@ -24,9 +24,9 @@ jobs:
       - run: zig build -Dtarget=aarch64-linux-musl -Doptimize=ReleaseFast -Dcpu=baseline
       - run: mv ./zig-out/bin/Cubyz-fmt Cubyz-fmt-aarch64-linux
       - run: zig build -Dtarget=x86_64-windows-gnu -Doptimize=ReleaseFast -Dcpu=baseline
-      - run: mv ./zig-out/bin/Cubyz-fmt Cubyz-fmt-x86_64-windows
+      - run: mv ./zig-out/bin/Cubyz-fmt.exe Cubyz-fmt-x86_64-windows.exe
       - run: zig build -Dtarget=aarch64-windows-gnu -Doptimize=ReleaseFast -Dcpu=baseline
-      - run: mv ./zig-out/bin/Cubyz-fmt Cubyz-fmt-aarch64-windows
+      - run: mv ./zig-out/bin/Cubyz-fmt.exe Cubyz-fmt-aarch64-windows.exe
       - run: zig build -Dtarget=x86_64-macos-none -Doptimize=ReleaseFast -Dcpu=baseline
       - run: mv ./zig-out/bin/Cubyz-fmt Cubyz-fmt-x86_64-macos
       - run: zig build -Dtarget=aarch64-macos-none -Doptimize=ReleaseFast -Dcpu=baseline
@@ -42,8 +42,8 @@ jobs:
               --title="${GITHUB_REPOSITORY#*/} ${tag#v}" \
               Cubyz-fmt-x86_64-linux \
               Cubyz-fmt-aarch64-linux \
-              Cubyz-fmt-x86_64-windows \
-              Cubyz-fmt-aarch64-windows \
+              Cubyz-fmt-x86_64-windows.exe \
+              Cubyz-fmt-aarch64-windows.exe \
               Cubyz-fmt-x86_64-macos \
               Cubyz-fmt-aarch64-macos
           gh release
