@@ -1,0 +1,13 @@
+.{
+	.name = .Cubyz_formatter,
+	.version = "0.0.0",
+	.fingerprint = 0xbd1e7dfe5e96660a,
+	.paths = .{""},
+	.dependencies = .{
+		.modified_std_lib = .{
+			.url = "https://github.com/PixelGuys/Cubyz-std-lib/archive/refs/tags/0.15.0-dev.1034+bd97b6618+runner.tar.gz",
+			.hash = "zig-0.0.0-Fp4XJJEKDQ2urXaG5g99lcuW2Llqpnk9pl9EFqxn6xXN",
+			.lazy = true,
+		},
+	},
+}
