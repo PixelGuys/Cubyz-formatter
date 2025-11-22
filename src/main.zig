@@ -7,5 +7,8 @@ pub fn main() !void {
 	var arena = std.heap.ArenaAllocator.init(gpa.allocator());
 	defer arena.deinit();
 	const args = try process.argsAlloc(arena.allocator());
-	try fmt.run(gpa.allocator(), arena.allocator(), args[1..]);
+	var threadedIo = std.Io.Threaded.init(gpa.allocator());
+	defer threadedIo.deinit();
+
+	try fmt.run(gpa.allocator(), arena.allocator(), threadedIo.io(), args[1..]);
 }
