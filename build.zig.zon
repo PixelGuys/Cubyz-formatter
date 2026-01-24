@@ -5,8 +5,8 @@
 	.paths = .{""},
 	.dependencies = .{
 		.modified_std_lib = .{
-			.url = "https://github.com/PixelGuys/Cubyz-std-lib/archive/refs/tags/0.16.0-dev.1424+2.tar.gz",
-			.hash = "zig-0.0.0-Fp4XJOflXQ39bdq-0qpcxeERxiHeX06EqH8EtN6VDzlA",
+			.url = "https://github.com/PixelGuys/Cubyz-std-lib/archive/refs/tags/0.16.0-dev.1424+3.tar.gz",
+			.hash = "zig-0.0.0-Fp4XJK3lXQ27ZcY_UKZ6PBpdpdC0DHfSdJ1r79IarigI",
 		},
 	},
 }
